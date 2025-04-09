@@ -1,13 +1,13 @@
-function startEventHandler() {
+function init() {
     const alertButton = document.getElementById('entrybutton');
     const userInput = document.getElementById('entryinput');
-    const displayOutput = document.getElementById('textoutput');
+    const resultHeading = document.getElementById('textoutput');
 
     alertButton.addEventListener('click', function () {
-        const typedText = userInput.value.trim();
-        alert("Peter Kim says: " + typedText);
-        displayOutput.textContent = typedText;
+        const message = userInput.value.trim();
+        alert("Peter Kim: " + message);
+        resultHeading.textContent = message;
     });
 }
 
-window.addEventListener('DOMContentLoaded', startEventHandler);
+window.addEventListener('DOMContentLoaded', init);
